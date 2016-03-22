@@ -1,0 +1,54 @@
+// examen.cpp : Defines the entry point for the console application.
+//
+
+#include "stdafx.h"
+#include <iostream>
+#include "conio.h"
+
+using namespace std;
+void main()
+{
+	float base,altura,area;
+	int op;
+
+    cout<<"digite:"<<endl;
+    cout<<"1. Para calcular el area del rectangulo"<<endl;
+    cout<<"2. Para calcular el area del triangulo"<<endl;
+	cout<<"3. Para no hacer nada"<<endl;
+	cout<<"escribir opcion:"<<endl;
+	cin>>op;
+
+	if (op==1)
+
+    {
+	cout<<"Ingrese la base:"<<endl;
+	cin>>base;
+
+	cout<<"Ingrese la altura:"<<endl;
+	cin>>altura;
+
+	area=base*altura;
+	cout<<"El area es:"<<area<<endl;
+    }
+
+
+	if (op==2)
+
+    {
+	cout<<"Ingrese la base:"<<endl;
+	cin>>base;
+
+	cout<<"Ingrese la altura:"<<endl;
+	cin>>altura;
+
+	area=(base*altura)/2;
+	cout<<"El area es:"<<area<<endl;
+    }
+
+	if (op==3)
+	 
+	  cout<<"GRACIAS";
+
+	getch();
+
+}
