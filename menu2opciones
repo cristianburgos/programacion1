@@ -1,0 +1,86 @@
+// menu.cpp : Defines the entry point for the console application.
+//comentarios
+//Autor: Cristian Burgos
+//3/29/2016
+
+//librerias
+#include "stdafx.h"
+#include <iostream>
+#include "conio.h"
+
+using namespace std;
+
+void main()
+{
+	int opcion;
+	float radio,area,peso,costoenvio;
+ 
+ 
+   do {
+	  
+     cout << endl;
+     cout << "1.- Area del ciculo" << endl;
+     cout << "2.- Peso de carta" << endl;
+	 cout << "0.- Salir" << endl;
+     cout << "Elige una opción: " ;
+     cin >> opcion;
+
+     switch (opcion) 
+	 {
+	    case 1:
+			{
+			cout << "Ingrese radio: " ;
+            cin >> radio;
+			area= radio*radio*3.141516; 
+			cout << "El area es " << area << endl;
+			break;
+			}
+	    case 2:
+			{ 
+			cout << "Ingrese peso de carta : " ;
+			cin >> peso;
+			if (peso<0)
+	 
+				cout<<"valor invalido";
+			else
+				if (peso<50)
+				{
+					costoenvio=1.5*peso;
+					cout<<"mostrar costo de envio:"<<costoenvio<<endl;
+				}
+				else
+					if (peso<=100)
+					{
+						costoenvio=4*peso;
+						cout<<"mostrar costo de envio:"<<costoenvio<<endl;
+					}
+					else
+						if (peso<=200)
+						{
+							costoenvio=6*peso;
+							cout<<"mostrar costo envio:"<<costoenvio<<endl;
+						}
+						else 
+							if (peso<=350)
+							{
+								costoenvio=10.5*peso;
+								cout<<"costo de envio:"<<costoenvio<<endl;
+							}
+							else
+								if (peso<=500)
+								{
+									costoenvio=15.00*peso;
+									cout<<"costo de envio:"<<costoenvio<<endl;
+								}
+								else
+									cout<<"no se puede enviar la carta";
+			      
+				  cout<<"El costo de envio es"<<costoenvio<<endl;
+				  break;
+				}
+			case 0: cout << "Salir";break;
+		
+			default: cout << "Opcion invalida" << endl;
+     }
+     
+	 } while (opcion != 0);
