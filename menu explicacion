@@ -1,0 +1,50 @@
+// menu.cpp : Defines the entry point for the console application.
+//comentarios
+//Autor: Cristian Burgos
+//3/29/2016
+
+//librerias
+#include "stdafx.h"
+#include <iostream>
+#include "conio.h"
+
+using namespace std;
+
+void main()
+{
+   //int para declarar variables enteras
+   //float para declarar variables acepta decimales
+	int a, b, r, opcion;
+   cout << "Ingrese a: " ;
+   cin >> a;
+   cout << "Ingrese b: " ;
+   cin >> b;
+   //do ciclo repetitivo
+   do {
+     cout << endl;
+     cout << "1.- Suma" << endl;
+     cout << "2.- Resta" << endl;
+     cout << "3.- Producto" << endl;
+     cout << "4.- División" << endl;
+	 cout << "0.- Salir" << endl;
+     cout << "Elige una opción: " ;
+     cin >> opcion;
+	 //switch condicional multiple equivale a utilizar varios if
+     switch (opcion) {
+	    case 1: r = a + b; break;// break terminar la intruccion
+	    case 2: r = a - b; break;
+	    case 3: r = a * b; break;
+	    case 4: r = a / b; break;
+		case 0: cout << "Salir";break;
+		//default es para ninguna de las anteriores
+	    default: cout << "Opcion invalida" << endl;
+     }
+     cout << "El resultado es " << r << endl;
+	 //
+	 } while (opcion != 0);
+
+
+   //fin del ciclo
+  
+     getch();
+}
