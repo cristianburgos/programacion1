@@ -1,0 +1,40 @@
+// Nota promedio.cpp : Defines the entry point for the console application.
+//
+
+#include "stdafx.h"
+#include <iostream>
+#include "conio.h"
+
+using namespace std;
+
+void main()
+{
+	float par1,par2,np,examfinal,nf,faltas,n,i;
+	cout<<"Introducir el numero de estudiantes: ";
+	cin>>n;
+	for (i=1; i<=n; i++)
+	{
+	cout<<" Introducir nota del primer parcial: ";
+	cin>>par1;
+	cout<<"Introducir nota del segundo parcial: ";
+	cin>>par2;
+	cout<<"Introducir nota practica: ";
+	cin>>np;
+	cout<<"Introducir el numero de faltas del estudiante: ";
+	cin>>faltas;
+	cout<<"Introducir nota del examen final: ";
+	cin>>examfinal;
+	if (faltas>=10)
+		examfinal=0;
+	else
+		examfinal=examfinal;
+	nf=(par1*0.20+par2*0.20+np*0.20+examfinal*0.40);
+	cout<<"La nota final sera: "<<nf<<endl;
+	if (nf>=51)
+			cout<<"APROBADO"<<endl;
+		else
+			cout<<"REPROBADO"<<endl;
+	}
+getch();
+
+}
