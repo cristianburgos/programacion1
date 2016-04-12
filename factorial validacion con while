@@ -1,0 +1,29 @@
+// factorial validacion con while.cpp : Defines the entry point for the console application.
+//
+
+#include "stdafx.h"
+#include <iostream>
+#include "conio.h"
+using namespace std;
+void main ()
+{
+	int factorial,i,n;
+	// factorial es un acumulador de producto
+	// i es un contador
+	// n es el numero al que necesita calcular el factorial
+	// validar la entrada
+	factorial=1; //Inicializar el acumulador de producto
+	do {
+		cout<<"ingrese el valor de n: ";
+		cin>>n;
+	}while (n<0); // La condicion debe contemplar los valores incorrectos
+	              // Negar la condicion correcta
+	i=2;
+	while (i<=n)
+	{
+		factorial=factorial*i; // Acumulador de producto
+	    i++;
+	}
+	cout<<" El factorial de "<<n<<" es : "<<factorial;
+	getch();
+}
