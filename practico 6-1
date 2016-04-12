@@ -1,0 +1,29 @@
+// practico 6-1.cpp : Defines the entry point for the console application.
+//
+
+#include "stdafx.h"
+#include <iostream>
+#include"conio.h"
+
+using namespace std;
+void main ()
+
+{
+	int s,n,i;
+	do
+	{
+		cout<<"ingrese el numero de elementos que desea sumar: ";
+		cin>>n;
+		cout<<""<<endl;//para bajar otra linea
+	}
+	while (n<0);
+	s=0;
+	for (i=1 ; i<=n ; i++)
+	{
+		s=s+i;
+		cout<<"sumando; "<<i<<endl;
+	}
+	cout<<"la suma de los numeros es: "<<s;
+	getch ();
+}
+
