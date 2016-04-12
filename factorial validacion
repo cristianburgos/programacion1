@@ -1,0 +1,27 @@
+// factorial validacion.cpp : Defines the entry point for the console application.
+//
+
+#include "stdafx.h"
+#include <iostream>
+#include"conio.h"
+
+using namespace std;
+
+void main()
+{
+	int i,n,factorial;
+	//validar el ingreso de valores correctos a n
+	do
+	{
+		cout<<"Ingrese el valor de n:";
+		cin>>n;
+	}
+	while (n<0);
+
+	factorial=1; //inicializar el acumulador de producto a 1
+	for (i=2;i<=n;i++) //inicializa,compara e incrementa
+		factorial=factorial*i; //acumular
+	cout<<"El factorial de: "<<n<<" es: "<<factorial;
+	getch ();
+}
+
