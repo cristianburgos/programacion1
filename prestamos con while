@@ -1,0 +1,34 @@
+// laboratorio.cpp : Defines the entry point for the console application.
+//
+
+#include "stdafx.h"
+#include <iostream>
+#include "conio.h"
+#include <string>
+using namespace std;
+void main ()
+{
+	int cod,numprestamo,aux;
+	float totalprestado,montoemp,monto;
+	string nombre;
+	cout<<"ingrese el numero de codigo: ";
+	cin>>cod;
+	totalprestado=0;
+	while(cod!=-999)
+	{
+		aux=cod;
+		montoemp=0;
+		while (aux==cod)
+		{
+			cout<<"ingrese los datos adicionales: "<<endl;
+			cin>>nombre>>monto>>numprestamo;
+			montoemp=montoemp+monto*numprestamo;
+			cout<<"ingresar el codigo: ";
+			cin>>cod;
+		}
+		cout<<"empleado: "<<aux<<" monto prestado: "<<montoemp<<endl;
+		totalprestado=totalprestado+montoemp;
+	}
+	cout<<"total prestado: "<<totalprestado<<endl;
+getch();
+}
