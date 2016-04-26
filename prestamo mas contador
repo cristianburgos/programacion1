@@ -1,0 +1,50 @@
+// Ciclosanidados.cpp : Defines the entry point for the console application.
+//
+
+// Calculo Prestamos Empresa.cpp : Defines the entry point for the console application.
+//
+
+#include "stdafx.h"
+#include <iostream>
+#include "conio.h"
+#include <string>
+
+using namespace std;
+
+void main()
+{
+	int aux, codigo, numprestamo,i, numpe;
+	float  montoprestamo,montoe, montototal,numemp=0;
+	string nombre;
+	montototal=0;
+	// Zona de control por el codigo
+	cout << "Ingrese el Codigo del empleado: ( Se Termina con -999 )  ";
+	cin  >> codigo;
+	while (codigo != -999)
+	{
+		aux=codigo;
+		montoe=0; // Inicializar el acumulador montototal
+		numpe=0; // Inicializar contador
+		while (aux == codigo)
+		{
+			cout << "Ingrese el Nombre del Empleado:  ";
+		    cin  >> nombre;
+		    cout << "Ingrese el numero de Prestamo:  ";
+		    cin  >> numprestamo;
+            cout << "Ingrese el Monto del prestamo:  ";
+	        cin  >> montoprestamo;
+			// acumular
+		    montoe=montoe+montoprestamo;
+			// contador
+			numpe=numpe+1;
+			// Zona de control por el codigo
+			cout << "Ingrese el codigo del empleado:  ";
+		    cin  >> codigo;
+		}
+		cout << "Empleado: " << aux << "Monto de Empleado: " << montoe << "Numero de prestamos"<<numpe<<endl;
+		montototal=montototal+montoe;
+		numemp=numemp+1;
+	}
+	cout << "El Monto Prestado a "<<numemp<< "Empleados es:  " << montototal << endl;
+	getch();
+}
