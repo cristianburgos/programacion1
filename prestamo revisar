@@ -1,0 +1,43 @@
+// prestamos lab.cpp : Defines the entry point for the console application.
+//
+
+#include "stdafx.h"
+#include <iostream>
+#include "conio.h"
+#include <string>
+
+using namespace std;
+
+void main()
+{
+	int aux,codigo,numprestamo,i;
+	float montoprestamo,montoe,montototal;
+	string nombre;
+	montototal=0;
+	//ZONA DE CONTROL PARA EL CODIGO
+	cout<<"Ingrese el codio del empleado:( Se terminaq con -999)  ";
+	cin>>codigo;
+	while (codigo!=-999)
+	{
+		aux=codigo;
+		montoe=0;//INICIALIZAR EL ACUMULADOR MONTOTOTAL
+		while (aux == codigo)
+		{
+			cout<<"Ingrese el nombre del empleado:  ";
+			cin>>nombre;
+			cout<<"Ingrese el numero de prestamo:  ";
+			cin>>numprestamo;
+			cout<<"Ingrese el monto del prestamo:  ";
+			cin>>montoprestamo;
+			montoe=montoe+montoprestamo;
+			//ZONA DE CONTROL PARA EL CODIGO
+			cout<<"Ingrese el codigo del empleado;  ";
+			cin>>codigo;
+		}
+		cout<<"	Empleado:  " << aux << " Monto de empleado:  " <<montoe << endl;
+		montototal=montototal+montoe;
+	}
+	cout<<" El monto prestado de los empleados es:  " << montototal << endl;
+	getch();
+}
+
