@@ -1,0 +1,38 @@
+// ejercicio 10.cpp : Defines the entry point for the console application.
+//
+
+#include "stdafx.h"
+#include <iostream>
+#include "conio.h"
+#include "math.h"
+using namespace std;
+void main ()
+{
+	int i,fac,sig;
+	float s,x,n;
+	s=0;
+	fac=1;
+	sig=1;
+	do 
+	{
+		cout<<"ingrese el dato hasta el numero de datos que desea calcular la suma: ";
+		cin>>n;
+	}while(n<=0);
+	do
+	{
+		cout<<"ingrese el valor del dato el cual sera calculado: ";
+		cin>>x;
+	}while(x==0);
+	for (i=1;i<=n;i++)
+		{
+		   if (i%2!=0)
+		   {
+		       sig=-sig;
+			   s=s+sig*((pow(x,i))/(fac));
+		   }
+		   fac=fac*i;
+		  
+	    }
+	cout<<"el resultado de la suma sera: "<<s<<endl;
+getch();
+}
