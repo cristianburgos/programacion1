@@ -2,7 +2,6 @@
 //
 #include "stdafx.h"
 #include <iostream>
-#include"math.h"
 #include "conio.h"
 using namespace std;
 float vol_cilindro(float r, float a);//prototipo de la funcion
