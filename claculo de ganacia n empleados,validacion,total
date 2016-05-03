@@ -1,0 +1,42 @@
+// calculodesalario.cpp : Defines the entry point for the console application.
+//
+
+#include "stdafx.h"
+#include <iostream>
+#include"conio.h"
+
+using namespace std;
+float ganancia(float h,float c);//prototipo de la funcion
+
+void main ()
+
+{
+	float horas,costo,total,s=0;
+	int n;
+	do
+	{
+	cout<<"Ingrese el numero de empleados: ";
+	cin>>n;
+	}while (n<0);
+	for (int i=1;i<=n;i++)
+	{
+		do
+		{
+			cout<<"Ingrese horas trabajadas: ";
+			cin>>horas;
+		}while((horas<=0)||(horas>200));
+		    cout<<"Ingrese el costo: ";
+		    cin>>costo;
+		    total=ganancia(horas,costo);
+		    s=s+total;
+		    cout<<"El total ganado es: "<<total;
+	}
+	cout<<"El total de la planilla es: "<<s;
+	getch();
+}
+
+float ganancia(float h,float c)
+{ float z;
+  z=h*c;
+  return z;
+}
