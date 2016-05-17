@@ -12,7 +12,7 @@ using namespace std;
 void cargar (double a[], int tam);
 void mostrar (double a[], int tam);
 double promedio(double a[], int tam);
-void Burbuja(double a[],int tam);
+void Burbuja(double a[],int tam);//clasificar vectores
 int BusquedaLineal(double a[],int b,int tam);
 
 void main ()
